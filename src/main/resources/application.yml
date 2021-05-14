@@ -1,0 +1,11 @@
+spring:
+  config:
+    import:
+      - optional:configserver:\${vcap.services.config-server-development.credentials.uri}
+      - optional:configserver:\${vcap.services.config-server-production.credentials.uri}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
