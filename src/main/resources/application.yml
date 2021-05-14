@@ -1,4 +1,6 @@
 spring:
+  profile:
+    active: development
   config:
     import:
       - optional:configserver:\${vcap.services.config-server-development.credentials.uri}
